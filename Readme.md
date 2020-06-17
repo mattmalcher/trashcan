@@ -30,8 +30,7 @@
 
 
 # Flight Config
-Limiting Throttle
-Setting Exp to give less dramatic response
+Adding a rateprofile with a scaled throttle limit of 0.7 and setting Exp to 0.5 will give a much more manageable setup for flying indoors.
 
 [Tips on flying indoors](https://blog.georgi-yanev.com/fpv/unbox-review-setup-eachine-trashcan/#flying-indoors)
 

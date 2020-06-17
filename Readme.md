@@ -9,12 +9,16 @@
 * Receiver:
     * FLYSKY AFHDS 2A Version
 
+* Transmitter:
+    * FLYSKY i6 - [Can upgrade to support more channels](https://github.com/qba667/FlySkyI6/wiki)
+
 * ESC:
   * S-H-50 - key here is `H`
   * 16-bit ESC (can use BLHELI or BLHELI_S, [not BLHELI_32](https://4in1esc.com/articles/blhelis-vs-blheli32) )
   * Factory Firmware: BLHELI_S 16.7
 
 * Motors:
+  * TC0803 - KV15000 - snappy but thin spindle which is easy to bend
 
 
 # Initial Setup

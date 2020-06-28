@@ -10,7 +10,8 @@
     * FLYSKY AFHDS 2A Version
 
 * Transmitter:
-    * FLYSKY i6 - [Can upgrade to support more channels](https://github.com/qba667/FlySkyI6/wiki)
+    * FLYSKY i6 - [Can upgrade to support more channels](https://github.com/qba667/FlySkyI6/wiki) (Note - wiring diagram on install page has correct labels, but tx and rx were other way round vs lines in diagram on rs232 board. Also use 3.3v mode.)
+
 
 * ESC:
   * S-H-50 - key here is `H`

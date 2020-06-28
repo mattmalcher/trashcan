@@ -1,5 +1,8 @@
-# 
+Entering CLI Mode, type 'exit' to return, or 'help'
 
+# 
+# Building AutoComplete Cache ... Done!
+# 
 # diff all
 
 # version
@@ -22,11 +25,22 @@ feature MOTOR_STOP
 feature LED_STRIP
 
 # aux
-aux 0 0 0 1300 1700 0 0
-aux 1 1 1 1000 1200 0 0
-aux 2 2 1 1200 1400 0 0
-aux 3 28 1 1400 1600 0 0
-aux 4 47 1 1600 1800 0 0
+aux 0 0 2 1950 2100 0 0
+aux 1 1 5 1925 2100 0 0
+aux 2 1 0 1200 1400 0 0
+aux 3 2 0 1400 1600 0 0
+aux 4 6 0 1600 1825 0 0
+aux 5 27 0 1825 2050 0 0
+aux 6 13 0 1825 2050 0 0
+aux 7 28 3 1950 2100 0 0
+
+# adjrange
+adjrange 0 0 4 1000 1200 12 4 0 0
+adjrange 1 0 4 1400 1600 12 4 0 0
+adjrange 2 0 4 1900 2100 12 4 0 0
+adjrange 3 0 1 1000 1275 29 1 0 0
+adjrange 4 0 1 1275 1700 29 1 0 0
+adjrange 5 0 1 1700 2100 29 1 0 0
 
 # master
 set gyro_sync_denom = 2
@@ -39,20 +53,31 @@ set dyn_lpf_gyro_max_hz = 900
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
 set motor_poles = 12
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 335
 set yaw_motors_reversed = ON
 set pid_process_denom = 1
-set osd_vbat_pos = 2135
+set osd_vbat_pos = 2134
+set osd_rssi_pos = 6177
+set osd_rssi_dbm_pos = 46
 set osd_flymode_pos = 2456
+set osd_anti_gravity_pos = 346
 set osd_throttle_pos = 2433
-set osd_crosshairs_pos = 2253
+set osd_vtx_channel_pos = 75
+set osd_crosshairs_pos = 6349
 set osd_ah_pos = 2126
 set osd_mah_drawn_pos = 65
-set osd_pidrate_profile_pos = 2401
+set osd_motor_diag_pos = 161
+set osd_pidrate_profile_pos = 2425
 set osd_warnings_pos = 14730
-set osd_avg_cell_voltage_pos = 2103
+set osd_avg_cell_voltage_pos = 6198
+set osd_battery_usage_pos = 41
+set osd_disarmed_pos = 43
 set osd_esc_tmp_pos = 65
+set osd_esc_rpm_pos = 193
+set osd_esc_rpm_freq_pos = 97
 set osd_flip_arrow_pos = 2282
-set osd_core_temp_pos = 2081
+set osd_core_temp_pos = 2113
 set flysky_spi_tx_id = 2000570489
 set flysky_spi_rf_channels = 12,55,106,36,59,18,113,96,63,29,100,83,118,45,123,137
 
@@ -62,6 +87,7 @@ profile 0
 set dyn_lpf_dterm_min_hz = 100
 set dyn_lpf_dterm_max_hz = 250
 set dterm_lowpass2_hz = 200
+set acro_trainer_angle_limit = 30
 set p_pitch = 50
 set i_pitch = 50
 set d_pitch = 30
@@ -84,26 +110,37 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set thr_mid = 30
-set thr_expo = 55
+set thr_mid = 35
+set thr_expo = 50
+set roll_expo = 50
+set pitch_expo = 50
 set tpa_rate = 50
 set tpa_breakpoint = 1500
-set throttle_limit_percent = 40
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 55
 
 rateprofile 1
 
 # rateprofile 1
-set thr_expo = 50
+set thr_mid = 30
+set thr_expo = 60
+set roll_expo = 50
+set pitch_expo = 50
 set tpa_rate = 50
 set tpa_breakpoint = 1500
-set throttle_limit_percent = 65
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 66
 
 rateprofile 2
 
 # rateprofile 2
+set thr_mid = 30
 set thr_expo = 50
+set roll_expo = 50
+set pitch_expo = 50
 set tpa_rate = 50
 set tpa_breakpoint = 1500
+set throttle_limit_type = SCALE
 set throttle_limit_percent = 85
 
 rateprofile 3
@@ -116,12 +153,14 @@ set tpa_breakpoint = 1500
 rateprofile 4
 
 # rateprofile 4
+set thr_mid = 25
 set thr_expo = 50
 set roll_expo = 50
 set pitch_expo = 50
 set tpa_rate = 50
 set tpa_breakpoint = 1500
-set throttle_limit_percent = 25
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 65
 
 rateprofile 5
 
@@ -131,11 +170,9 @@ set roll_expo = 50
 set pitch_expo = 50
 set tpa_rate = 50
 set tpa_breakpoint = 1500
-set throttle_limit_percent = 65
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
-# 
